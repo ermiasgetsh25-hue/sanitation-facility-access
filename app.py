@@ -135,7 +135,7 @@ def build_features(
         "type_of_place_of_residence",
         "community_level_education",
         "has_electricity",
-        "handwashing_place_observed",
+        "Observed handwashing facility",
         "location_of_source_for_water_in_own_yard/plot",
         "source_of_drinking_water",
         "Number_of_households_Members",
@@ -166,7 +166,7 @@ def build_features(
 
 
 # ---------- STREAMLIT UI ----------
-st.title("🚽 Predicting Access to Unimproved Sanitation Facilities among Ethiopian Households Using Advanced Machine Learning Analysis of EDHS Data from 2024-2025. ")
+st.title("🚽 Predicting household sanitation service status using interpretable machine learning: Evidence from the Ethiopia Demographic and Health Survey 2024–2025.")
 st.markdown("""
 This tool uses an XGBoost model to predict whether a household has **improved** or **unimproved** sanitation facilities.
 """)
@@ -188,7 +188,7 @@ with st.sidebar:
     st.subheader("Water & Sanitation")
     drinking_water_source = st.radio("Source of drinking water", ["Improved", "Unimproved"])
     water_location = st.radio("Location of water source", ["In own dwelling", "In own yard", "Elsewhere"])
-    water_time_category = st.radio("Time to get to water source", ["Basic water", "Limited water"])
+    water_time_category = st.radio("Time to get to water source", ["<=30 minutes", ">30 minutes"])
     water_treatment = st.radio("Household water treatment", ["No", "Yes"])
     toilet_sharing = st.radio("Share toilet with other households", ["No", "Yes"])
     water_handwash_presence = st.radio("Presence of water at handwashing place", ["No", "Yes"])
@@ -274,4 +274,4 @@ else:
     st.info("Fill in all inputs and click 'Predict Sanitation Access'.")
 
 st.markdown("---")
-st.caption("Model: XGBoost | Data: Demographic and Health Survey, East Africa")
+st.caption("Model: XGBoost | Data: Demographic and Health Survey, Ethiopia")
