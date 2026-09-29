@@ -188,7 +188,7 @@ with st.sidebar:
     st.subheader("Water & Sanitation")
     drinking_water_source = st.radio("Source of drinking water", ["Improved", "Unimproved"])
     water_location = st.radio("Location of water source", ["In own dwelling", "In own yard", "Elsewhere"])
-    water_time_category = st.radio("Time to get to water source", ["<=30 minutes", ">30 minutes"])
+    water_time_category = st.radio("Time to get to water source", ["Basic water", "Limited water"])
     water_treatment = st.radio("Household water treatment", ["No", "Yes"])
     toilet_sharing = st.radio("Share toilet with other households", ["No", "Yes"])
     water_handwash_presence = st.radio("Presence of water at handwashing place", ["No", "Yes"])
