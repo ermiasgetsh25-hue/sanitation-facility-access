@@ -135,7 +135,7 @@ def build_features(
         "type_of_place_of_residence",
         "community_level_education",
         "has_electricity",
-        "Observed handwashing facility",
+        "handwashing place observed",
         "location_of_source_for_water_in_own_yard/plot",
         "source_of_drinking_water",
         "Number_of_households_Members",
